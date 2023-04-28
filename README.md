@@ -13,15 +13,19 @@ npm i dsc-lib
 ## Usage
 
 ```typescript
-import foobar
+import {DSCConnector} from 'dsc-lib';
 
 let connectorController: DSCConnector;
 
-const connectorController = new DSCConnector('https://connectorurl:port', "username", "password");
+const connectorController = new DSCConnector(
+  'https://connectorurl:port',
+  'username',
+  'password'
+);
 
 await connectorController.messagingService.sendIdsDescription(
-    'https://anotherConnectorsHostname:8080/api/ids/data'
-      );
+  'https://anotherConnectorsHostname:8080/api/ids/data'
+);
 ```
 
     See ./test/connector for more examples
